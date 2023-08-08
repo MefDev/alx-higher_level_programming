@@ -2,11 +2,9 @@
 import random
 number = random.randint(-10000, 10000)
 
-
 def last_digit(num):
     last_digit_unsigned = abs(num) % 10
     return -last_digit_unsigned if (num < 0) else last_digit_unsigned
-
 
 last_digit_val = last_digit(number)
 stringVal = "Last digit of"

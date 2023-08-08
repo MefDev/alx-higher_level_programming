@@ -11,8 +11,8 @@ greatThanFive = "and is greater than 5"
 lessThanSix = "and is less than 6 and not 0"
 isZero = "and is 0"
 if (last_digit_val > 5):
-    print(f"{stringVal} {number} is {last_digit_val} and {greatThanFive}")
+    print(f"{stringVal} {number} is {last_digit_val} {greatThanFive}")
 elif last_digit_val == 0:
-     print(f"{stringVal} {number} is {last_digit_val} and {isZero}")
+     print(f"{stringVal} {number} is {last_digit_val} {isZero}")
 else:
-    print(f"{stringVal} {number} is {last_digit_val} and {lessThanSix}")
+    print(f"{stringVal} {number} is {last_digit_val} {lessThanSix}")

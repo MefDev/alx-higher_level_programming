@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def islower(c):
-    if c.islower() is True and not "":
+    if c.islower() is True:
         return True
-    else:
-        return False
+    return False

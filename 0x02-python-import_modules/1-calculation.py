@@ -26,6 +26,7 @@ def sub(a=10, b=5):
     print(f"{a} - {b} = {a - b}")
     return (a - b)
 
+
 def mul(a=10, b=5):
     """My multiplication function
 

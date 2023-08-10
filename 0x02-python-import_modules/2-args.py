@@ -6,4 +6,4 @@ if num_of_args == 0:
 else:
     print(f"{num_of_args} arguments:")
     for i in range(1, num_of_args + 1):
-        print(f"{i}: {sys.argv[i]}") #
+        print(f"{i}: {sys.argv[i]}")

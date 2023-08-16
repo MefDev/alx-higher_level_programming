@@ -5,4 +5,6 @@ def search_replace(my_list, search, replace):
         index = new_list.index(search)
         if index in new_list:
             new_list[index] = replace
+        else:
+            return new_list
     return new_list

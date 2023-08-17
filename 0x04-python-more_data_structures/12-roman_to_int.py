@@ -7,5 +7,8 @@ def roman_to_int(roman_string):
     for char in roman_string:
         for key, val in dic.items():
             if (char == key):
-                sum += val
+                if (char == "I" and roman_string[0] == "I"):
+                    sum -= val
+                else:
+                    sum += val
     return sum

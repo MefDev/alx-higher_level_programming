@@ -4,8 +4,14 @@ def roman_to_int(roman_string):
     sum = 0
     if not roman_string:
         return 0
-    for char in roman_string:
-        for key, val in dic.items():
-            if (char == key):
-                sum += val
+    prev_value = 0
+    for char in reversed(roman_string):
+        value = dic.get(char)
+        if value is None:
+            return 0
+        if value < prev_value:
+            sum -= value
+        else:
+            sum += value
+        prev_value = value
     return sum

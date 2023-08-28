@@ -1,9 +1,4 @@
-# print the numbers depening on the second argument
-# try first then except
-# use a for loop to print
-# check if the i is less than x
-# you don't need to use len you should use a counter instead
-
+#!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
     length = 0
     try:

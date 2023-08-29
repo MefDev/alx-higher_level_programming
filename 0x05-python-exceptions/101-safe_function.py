@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 def safe_function(fct, *args):
     a = args[0]
     b = args[1]

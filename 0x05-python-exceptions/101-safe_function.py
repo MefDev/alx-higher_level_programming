@@ -9,4 +9,3 @@ def safe_function(fct, *args):
     except (ZeroDivisionError, IndexError) as err:
         sys.stderr.write("Exception: {}\n".format(err))
         return None
-   

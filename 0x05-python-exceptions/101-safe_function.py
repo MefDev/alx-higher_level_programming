@@ -5,9 +5,7 @@ def safe_function(fct, *args):
     try:
         div = fct(a, b)
         return div
-    except ZeroDivisionError as divErr:
-        print("Exception: {}".format(divErr))
+    except (ZeroDivisionError, IndexError, TypeError, ValueError) as err:
+        print("Exception: {}".format(err))
         return None
-    except IndexError as indxErr:
-        print("Exception: {}".format(indxErr))
-        return None
+   

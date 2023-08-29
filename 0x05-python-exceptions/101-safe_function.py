@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 def safe_function(fct, *args):
     import sys
-    a = args[0]
-    b = args[1]
+    if (len(args) < 2):
+        print("Exception: Not enough arguments provided")
+    else:
+        a = args[0]
+        b = args[1]
     try:
         div = fct(a, b)
         return div

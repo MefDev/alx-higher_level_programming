@@ -2,5 +2,8 @@
 """
 Square her like crazy
 """
+
+
 class Square:
+    """ create basic class """
     pass

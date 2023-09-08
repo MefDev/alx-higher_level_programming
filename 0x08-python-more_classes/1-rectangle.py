@@ -6,15 +6,18 @@ class Rectangle:
     """Real definition of a rectangle"""
 
     def __init__(self, width=0, height=0):
+        """Initializes the data."""
         self.__width = width
         self.__height = height
 
     @property
     def width(self):
+        """Retrieve the data."""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Set the data to a new value."""
         if isinstance(value, int):
             if value < 0:
                 raise ValueError("width must be >= 0")
@@ -25,10 +28,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """Retrieve the data."""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Set the data to a new value."""
         if isinstance(value, int):
             if value < 0:
                 raise ValueError("height must be >= 0")

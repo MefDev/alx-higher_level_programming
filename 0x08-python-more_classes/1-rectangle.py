@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-
-"""
-rectangle class
-"""
+"""Define a rectangle"""
 
 
 class Rectangle:
@@ -18,8 +15,8 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        if (isinstance(value, int)):
-            if (value < 0):
+        if isinstance(value, int):
+            if value < 0:
                 raise ValueError("width must be >= 0")
             else:
                 self.__width = value

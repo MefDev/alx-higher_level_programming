@@ -60,7 +60,7 @@ class Rectangle:
     def __str__(self):
         if not self.perimeter():
             return ""
-        return "\n".join([Rectangle.print_symbol * self.width
+        return "\n".join([self.print_symbol * self.width
                           for _ in range(self.height)])
 
     def __repr__(self):

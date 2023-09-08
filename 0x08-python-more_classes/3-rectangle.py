@@ -54,4 +54,6 @@ class Rectangle:
             return 2 * (self.__height + self.__width)
 
     def __str__(self):
+        if not self.perimeter():
+            return ""
         return "\n".join(["#" * self.width for _ in range(self.height)])

@@ -42,12 +42,11 @@ class Rectangle:
         else:
             raise TypeError("height must be an integer")
 
-    @property
     def area(self):
         """Calculate the areas."""
         return self.__height * self.__width
 
-    @property
+   
     def perimeter(self):
         """Calculate the perimeter."""
         if (self.__height == 0 or self.__width == 0):

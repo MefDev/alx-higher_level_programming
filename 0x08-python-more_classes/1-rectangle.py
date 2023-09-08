@@ -28,8 +28,8 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        if isinstance(self.__height, int):
-            if self.__height < 0:
+        if isinstance(value, int):
+            if value < 0:
                 raise ValueError("height must be >= 0")
             self.__height = value
         else:

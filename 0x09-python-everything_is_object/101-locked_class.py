@@ -3,4 +3,5 @@
 
 
 class LockedClass:
+    """Lock the class"""
     __slots__ = ["first_name"]

@@ -3,5 +3,5 @@
 
 
 class BaseGeometry:
-   """Empty class"""
-   pass
+    """Empty class"""
+    pass

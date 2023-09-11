@@ -11,5 +11,5 @@ class Rectangle(BaseGeometry):
         """initializes rectangle"""
         if not super().integer_validator("width", width):
             self.__width = width
-        if not super().integer_validator("width", height):
+        if not super().integer_validator("height", height):
             self.__height = height

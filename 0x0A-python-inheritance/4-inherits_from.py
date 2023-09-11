@@ -6,6 +6,6 @@ that inherited (directly or indirectly) from the specified class
 
 def inherits_from(obj, a_class):
     """Check if it inherit from the base class"""
-    if type(obj) is a_class:
+    if type(obj) == a_class:
         return False
     return issubclass(obj, a_class)

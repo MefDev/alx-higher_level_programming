@@ -5,4 +5,5 @@
 def read_file(filename=""):
     """Read from a file then print"""
     with open(filename, encoding="UTF-8") as a_file:
-        print(a_file.read())
+        for line in a_file:
+            print("{}".format(line), end="")

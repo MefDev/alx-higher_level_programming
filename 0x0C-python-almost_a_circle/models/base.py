@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" module doc for base """
+
 
 class Base:
     """manage id attribute in all your future classes

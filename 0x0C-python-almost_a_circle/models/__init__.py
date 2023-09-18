@@ -1,1 +1,2 @@
-# This is an empty Python package
+#!/usr/bin/python3
+""" module doc """

@@ -6,7 +6,7 @@ class Rectangle(Base):
     """A class Rectangle that inherits from Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize the code"""
+        """Initialize the code """
         super().__init__(id)
         if not isinstance(width, int):
             raise TypeError("width must be an integer")

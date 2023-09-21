@@ -46,7 +46,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(
             dictionary, {'id': 5, 'width': 10, 'height': 7, 'x': 2, 'y': 8})
         self.assertEqual(type(dictionary), dict)
-        self.assertEqual(json_dictionary, '[{"id": 5, "width": 10, "height": 7, "x": 2, "y": 8}]')
+        self.assertEqual(
+            json_dictionary, '[{"id": 5, "width": 10, "height": 7, "x": 2, "y": 8}]')
         self.assertEqual(type(json_dictionary), str)
 
     def test_json_empty_none_values(self):
@@ -60,4 +61,12 @@ class TestBase(unittest.TestCase):
         self.assertEqual(none_value_json_dict, "[]")
         self.assertEqual(type(none_value_json_dict), str)
 
+    def test_save_to_file_custom_values(self):
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        self.assertEqual(Rectangle.save_to_file(
+            [r1, r2]), '[{"id": 8, "width": 10, "height": 7, "x": 2, "y": 8}, {"id": 9, "width": 2, "height": 4, "x": 0, "y": 0}]')
 
+    def test_save_to_file_None_values(self):
+        r1 = None
+        self.assertEqual(Rectangle.save_to_file(r1), '[]')

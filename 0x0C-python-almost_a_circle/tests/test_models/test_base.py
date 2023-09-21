@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestBase(unittest.TestCase):
@@ -32,8 +33,31 @@ class TestBase(unittest.TestCase):
         b4 = Base(8)
         b5 = Base(16)
 
-        self.assertEqual(b1.id, 5)
+        self.assertEqual(b1.id, 6)
         self.assertEqual(b2.id, 120)
-        self.assertEqual(b3.id, 6)
+        self.assertEqual(b3.id, 7)
         self.assertEqual(b4.id, 8)
         self.assertEqual(b5.id, 16)
+
+    def test_json_custom_values(self):
+        r1 = Rectangle(10, 7, 2, 8)
+        dictionary = r1.to_dictionary()
+        json_dictionary = Base.to_json_string([dictionary])
+        self.assertEqual(
+            dictionary, {'id': 5, 'width': 10, 'height': 7, 'x': 2, 'y': 8})
+        self.assertEqual(type(dictionary), dict)
+        self.assertEqual(json_dictionary, '[{"id": 5, "width": 10, "height": 7, "x": 2, "y": 8}]')
+        self.assertEqual(type(json_dictionary), str)
+
+    def test_json_empty_none_values(self):
+        EMPTY = []
+        NONE_VALUE = None
+        empty_json_dictionary = Base.to_json_string(EMPTY)
+        self.assertEqual(empty_json_dictionary, "[]")
+        self.assertEqual(type(empty_json_dictionary), str)
+
+        none_value_json_dict = Base.to_json_string(NONE_VALUE)
+        self.assertEqual(none_value_json_dict, "[]")
+        self.assertEqual(type(none_value_json_dict), str)
+
+

@@ -70,3 +70,15 @@ class TestBase(unittest.TestCase):
     def test_save_to_file_None_values(self):
         r1 = None
         self.assertEqual(Rectangle.save_to_file(r1), '[]')
+
+    
+    def test_from_json_string_custom_values(self):
+        list_input = [
+        {'id': 89, 'width': 10, 'height': 4}, 
+        {'id': 7, 'width': 1, 'height': 7}
+        ]
+        json_list_input = Rectangle.to_json_string(list_input)
+        list_output = Rectangle.from_json_string(json_list_input)
+        self.assertEqual(type(list_input), list)
+        self.assertEqual(type(json_list_input), str)
+        self.assertEqual(type(list_output), list)

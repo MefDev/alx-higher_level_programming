@@ -7,3 +7,4 @@ CREATE TABLE NOT EXISTS second_table (id INT, name VARCHAR(256);
 	(2, "Alex", score, 3),
 	(3, "Bob", 14),
 	(4, "George", 8);
+

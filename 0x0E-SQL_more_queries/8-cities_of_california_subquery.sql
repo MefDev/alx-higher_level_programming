@@ -1,2 +1,2 @@
 -- SELECT FROM DB and its table
-SELECT id, name FROM cities WHERE (SELECT id FROM states WHERE name = "California") ORDER BY cities.id ASC;
+SELECT id, name FROM cities, states WHERE cities.id = states.id ORDER BY cities.id ASC;

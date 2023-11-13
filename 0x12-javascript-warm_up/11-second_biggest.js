@@ -4,7 +4,7 @@ let listOfArgs = process.argv.slice(2);
 listOfArgs = listOfArgs.map(e => Number(e));
 if (listOfArgs.length === 0) {
   console.log(0);
-} else if (listOfArgs[0] === 1 || listOfArgs.length === 1) {
+} else if (listOfArgs.length === 1) {
   console.log(0);
 } else {
   const max = Math.max(...listOfArgs);

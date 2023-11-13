@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 
 const [firstArg] = process.argv.slice(2);
 firstArg

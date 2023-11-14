@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 
 const dict = require('./101-data').dict;
 const list = [89, 90, 91, 92, 93, 94];

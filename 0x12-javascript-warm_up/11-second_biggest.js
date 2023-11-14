@@ -13,6 +13,6 @@ if (listOfArgs.length === 0) {
   } else {
     const index = listOfArgs.indexOf(max);
     const secondMax = Math.max(...listOfArgs.slice(0, index), ...listOfArgs.slice(index + 1));
-    console.log(secondMax);
+    !isFinite(secondMax) ? console.log(secondMax) : console.log(0);
   }
 }

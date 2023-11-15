@@ -3,7 +3,7 @@
 const dict = require('./101-data').dict;
 const obj = {
 };
-for (count in dict) {
+for (const count in dict) {
   const occurrences = dict[count];
   if (!obj[occurrences]) {
     obj[occurrences] = [];

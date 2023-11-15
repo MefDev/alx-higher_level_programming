@@ -1,30 +1,13 @@
-#!/usr/bin/node
+#!/usr/local/bin/node
 
 const fs = require('fs');
-const path = require('node:path');
 
 const [fileA, fileB, fileC] = process.argv.slice(2);
 
-const currentPath = process.cwd();
+const fileContentA = fs.readFileSync(fileA, 'utf8');
+const fileContentB = fs.readFileSync(fileB, 'utf8');
 
-const filePathA = path.join(currentPath, fileA);
-const filePathB = path.join(currentPath, fileB);
-const filePathC = path.join(currentPath, fileC);
-
-fs.readFile(filePathA, 'utf8', (err, data) => {
-  if (err) console.log(err);
-  fs.writeFile(filePathC, data, err => {
-    if (err) {
-      console.error(err);
-    }
-  });
-});
-
-fs.readFile(filePathB, 'utf8', (err, data) => {
-  if (err) console.log(err);
-  fs.appendFile(filePathC, `${data}\n`, err => {
-    if (err) {
-      console.error(err);
-    }
-  });
+const data = fileContentA + fileContentB;
+fs.writeFile(fileC, data, err => {
+  if (err) throw err;
 });

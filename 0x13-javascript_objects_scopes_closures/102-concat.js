@@ -13,7 +13,7 @@ const filePathC = path.join(currentPath, fileC);
 
 fs.readFile(filePathA, 'utf8', (err, data) => {
   if (err) console.log(err);
-  fs.writeFile(filePathC, `${data}\n`, err => {
+  fs.writeFile(filePathC, data, err => {
     if (err) {
       console.error(err);
     }
@@ -22,7 +22,7 @@ fs.readFile(filePathA, 'utf8', (err, data) => {
 
 fs.readFile(filePathB, 'utf8', (err, data) => {
   if (err) console.log(err);
-  fs.appendFile(filePathC, data, err => {
+  fs.appendFile(filePathC, `${data}\n`, err => {
     if (err) {
       console.error(err);
     }

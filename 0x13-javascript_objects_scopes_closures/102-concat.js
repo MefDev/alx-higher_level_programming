@@ -1,9 +1,9 @@
-#!/usr/bin/node
+#!/usr/local/bin/node
 
 const fs = require('fs');
 const path = require('node:path');
 
-const [, , fileA, fileB, fileC] = process.argv;
+const [fileA, fileB, fileC] = process.argv.slice(2);
 
 const currentPath = process.cwd();
 

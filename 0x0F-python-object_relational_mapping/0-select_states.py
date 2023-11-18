@@ -20,7 +20,3 @@ states = cur.fetchall()
 # Get the states
 for state in states:
     print(state)
-
-# Close the connection
-cur.close()
-conn.close()

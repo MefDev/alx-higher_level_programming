@@ -8,12 +8,9 @@
 import MySQLdb
 from sys import argv
 
-# Arguments from the CLI
-MY_USER, MY_PASS, MY_DB = argv[1], argv[2], argv[3]
-
-
 if __name__ == "__main__":
-    conn = MySQLdb.connect(user=MY_USER, passwd=MY_PASS, db=MY_DB)
+    conn = MySQLdb.connect(host="localhost", port=3306,
+                           user=argv[1], passwd=argv[2], db=argv[3])
     cur = conn.cursor()
     cur.execute("SELECT id, name FROM states ORDER BY id ASC")
 

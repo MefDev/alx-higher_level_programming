@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Get the filtered states from the database using the CLI arguments"""
+"""
+Get the filtered states from the database using the CLI arguments
+"""
 # Lists the filtered states from the database hbtn_0e_0_usa.
 # Usage: ./2-filter_states.py <mysql username> \
 #                             <mysql password> \

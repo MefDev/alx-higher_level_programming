@@ -11,7 +11,9 @@ def main():
     session = Session()
 
     # save the state and city
-    session.add(City(name="San Francisco"),  State(name='California'))
+    city = City(name="San Francisco")
+    State(name='California').cities.append(city)
+    session.add(city)
     session.commit()
 
 

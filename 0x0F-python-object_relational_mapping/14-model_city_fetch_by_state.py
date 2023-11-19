@@ -12,13 +12,12 @@ def main():
     session = Session()
 
     # Get the state
-    state_and_cities = session.query(State.name, City.id, City.name).filter(
-        State.id == City.state_id).order_by(City.id).all()
+    state_and_cities = session.query(State.name, City.id, City.name).join(
+        City, State.id == City.state_id).order_by(City.id)
     if (state_and_cities):
         # Print each state and city
         for state_name, city_id, city_name in state_and_cities:
-            if (city_id <= 15):
-                print("{}: ({}) {}".format(state_name, city_id, city_name))
+            print("{}: ({}) {}".format(state_name, city_id, city_name))
 
 
 if __name__ == "__main__":

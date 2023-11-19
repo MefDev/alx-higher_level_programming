@@ -6,6 +6,7 @@ from sqlalchemy import Column, String, Integer, ForeignKey
 
 
 class City(Base):
+    """City table class"""
     __tablename__ = 'cities'
     id = Column(Integer, autoincrement=True, unique=True,
                 nullable=False, primary_key=True)

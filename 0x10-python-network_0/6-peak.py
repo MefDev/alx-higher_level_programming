@@ -2,6 +2,7 @@
 #!/usr/bin/python3
 """Find a peak number"""
 def find_peak_recursive(arr, left, right):
+    """Find peak recusive"""
     mid = left + (right - left) // 2
     
     if (mid == 0 or arr[mid - 1] <= arr[mid]) and (mid == len(arr) - 1 or arr[mid + 1] <= arr[mid]):

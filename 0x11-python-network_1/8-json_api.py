@@ -3,7 +3,7 @@
 import requests
 from sys import argv
 if __name__ == "__main__":
-    data = {'q': "" if len(argv) == 1 else argv[1]}
+    data = {'q': argv[1] if len(argv) > 1 else ""}
     res = requests.get('http://0.0.0.0:5000/search_user', data=data)
     try:
         resp = res.json()

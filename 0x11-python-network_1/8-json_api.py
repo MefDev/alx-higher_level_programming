@@ -4,10 +4,10 @@ import requests
 from sys import argv
 if __name__ == "__main__":
     data = {'q': "" if len(argv) == 1 else argv[1]}
-    res = requests.get('http://54.237.23.212:5000/search_user', data=data)
+    res = requests.get('http://0.0.0.0:5000/search_user', data=data)
     try:
-        if res.json():
-            resp = res.json()
+        resp = res.json()
+        if resp:
             print("[{}] {}".format(resp.get('id'), resp.get('name')))
         else:
             print("No result")

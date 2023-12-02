@@ -6,4 +6,4 @@ from sys import argv
 if __name__ == "__main__":
     url = argv[1]
     res = requests.get(url)
-    print("{}".format(res.headers['X-Request-Id']))
+    print("{}".format(res.headers.get('X-Request-Id')))

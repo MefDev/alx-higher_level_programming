@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     owner = argv[1]
     repo = argv[2]
-    url = 'https://api.github.com/repos/{}/{}/commits?per_page=10'.format(
+    url = 'https://api.github.com/repos/{}/{}/commits?per_page=11'.format(
         owner, repo)
 
     list_of_commiters = requests.get(url)

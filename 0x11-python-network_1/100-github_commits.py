@@ -7,13 +7,12 @@ if __name__ == "__main__":
 
     owner = argv[1]
     repo = argv[2]
-    url = f'https://api.github.com/repos/{owner}/{repo}/commits?per_page=10'
+    url = 'https://api.github.com/repos/{}/{}/commits?per_page=10'.format(
+        owner, repo)
 
     list_of_commiters = requests.get(url)
-    try:
-        for committer in list_of_commiters.json():
-            sha = committer.get('sha')
-            name = committer.get('commit').get('author').get('name')
-            print("{}: {}".format(sha, name))
-    except IndexError:
-        pass
+
+    for committer in list_of_commiters.json():
+        sha = committer.get('sha')
+        name = committer.get('commit').get('author').get('name')
+        print("{}: {}".format(sha, name))

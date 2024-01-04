@@ -8,7 +8,7 @@ const completedTasks = (body) => {
   const tasks = {
 
   };
-  data = JSON.parse(body);
+  const data = JSON.parse(body);
   for (const obj in data) {
     if (data[obj].completed) {
       if (tasks[data[obj].userId]) {
